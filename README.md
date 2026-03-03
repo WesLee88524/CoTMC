@@ -1,4 +1,4 @@
-# CoTMC ((/'kɒt mæk/))
+# CoTMC (/'kɒt mæk/)
 ### **Chain-of-Thought Driven Motion Controller for Video Generation**
 
 <p align="center">
@@ -66,8 +66,8 @@ Furthermore, we introduce a new video object interaction (VOI) dataset to evalua
 
 ### Setting Environment 
 ```Shell
-git clone https://github.com/WesLee88524/CoTMC-Official-Repo.git
-cd CoTMC-Official-Repo
+git clone https://github.com/WesLee88524/CoTMC.git
+cd CoTMC
 
 conda create -n CoTMC python=3.8
 conda activate CoTMC
