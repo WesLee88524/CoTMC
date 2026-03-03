@@ -1,5 +1,5 @@
-# C-Drag-Official-Repo
-### **C-Drag: Chain-of-Thought Driven Motion Controller for Video Generation**
+# CoTMC ((/'kɒt mæk/))
+### **Chain-of-Thought Driven Motion Controller for Video Generation**
 
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="Oryx Video-ChatGPT">
@@ -19,15 +19,15 @@
 - `2025/02/13`: We built this repo.
 
 
-> **<p align="justify"> Abstract:** *Trajectory-based motion control has emerged as an intuitive and efficient approach for controllable video generation. However, the existing trajectory-based approaches are usually limited to only generating the motion trajectory of the controlled object and ignoring the dynamic interactions between the controlled object and its surroundings. To address this limitation, we propose a Chain-of-Thought-based motion controller for controllable video generation, named C-Drag. Instead of directly generating the motion of some objects, 
-our C-Drag first performs object perception and then reasons the dynamic interactions between different objects according to the given motion control of the objects. Specifically, our method includes an object perception module and a Chain-of-Thought-based motion reasoning module. The object perception module employs visual language models to capture the position and category information of various objects within the image. The Chain-of-Thought-based motion reasoning module takes this information as input and conducts a stage-wise reasoning process to generate motion trajectories for each of the affected objects, which are subsequently fed to the diffusion model for video synthesis.  
-Furthermore, we introduce a new video object interaction (VOI) dataset to evaluate the generation quality of motion controlled video generation methods. Our VOI dataset contains three typical types of interactions and provides the motion trajectories of objects that can be used for accurate performance evaluation.  Experimental results show that C-Drag achieves promising performance across multiple metrics, excelling in object motion control.*</p>
+> **<p align="justify"> Abstract:** *Trajectory-based motion control has emerged as an intuitive and efficient approach for controllable video generation. However, the existing trajectory-based approaches are usually limited to only generating the motion trajectory of the controlled object and ignoring the dynamic interactions between the controlled object and its surroundings. To address this limitation, we propose a Chain-of-Thought-based motion controller for controllable video generation, named CoTMC. Instead of directly generating the motion of some objects, 
+our CoTMC first performs object perception and then reasons the dynamic interactions between different objects according to the given motion control of the objects. Specifically, our method includes an object perception module and a Chain-of-Thought-based motion reasoning module. The object perception module employs visual language models to capture the position and category information of various objects within the image. The Chain-of-Thought-based motion reasoning module takes this information as input and conducts a stage-wise reasoning process to generate motion trajectories for each of the affected objects, which are subsequently fed to the diffusion model for video synthesis.  
+Furthermore, we introduce a new video object interaction (VOI) dataset to evaluate the generation quality of motion controlled video generation methods. Our VOI dataset contains three typical types of interactions and provides the motion trajectories of objects that can be used for accurate performance evaluation.  Experimental results show that CoTMC achieves promising performance across multiple metrics, excelling in object motion control.*</p>
 
 ## Intro
 
 
 
-- **C-Drag** first takes a single RGB image and one or more drag motion trajectories as input. We employ an object perception module to obtain information about all related objects in the image. Chain-of-Thought (CoT)-based reasoning module introduces a reasoning strategy to precisely reason motion trajectories of all objects according to the detected position and category information. With the generated object trajectories, we use a pre-trained trajectory-based generation model to generate the videos with multiple-object interactions. 
+- **CoTMC** first takes a single RGB image and one or more drag motion trajectories as input. We employ an object perception module to obtain information about all related objects in the image. Chain-of-Thought (CoT)-based reasoning module introduces a reasoning strategy to precisely reason motion trajectories of all objects according to the detected position and category information. With the generated object trajectories, we use a pre-trained trajectory-based generation model to generate the videos with multiple-object interactions. 
 
 <div align=center>
 	<img src="source/brief-framework2-min.png" width="60%"/>
@@ -66,11 +66,11 @@ Furthermore, we introduce a new video object interaction (VOI) dataset to evalua
 
 ### Setting Environment 
 ```Shell
-git clone https://github.com/WesLee88524/C-Drag-Official-Repo.git
-cd C-Drag-Official-Repo
+git clone https://github.com/WesLee88524/CoTMC-Official-Repo.git
+cd CoTMC-Official-Repo
 
-conda create -n C-Drag python=3.8
-conda activate C-Drag
+conda create -n CoTMC python=3.8
+conda activate CoTMC
 pip install -r environment.txt
 ```
 
